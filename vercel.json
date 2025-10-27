@@ -1,4 +1,7 @@
-# 在專案文件夾中運行
+# 刪除現有的 vercel.json
+rm vercel.json
+
+# 創建新的 vercel.json
 cat > vercel.json << 'EOF'
 {
   "version": 2,
@@ -10,19 +13,8 @@ cat > vercel.json << 'EOF'
   ],
   "routes": [
     {
-      "src": "/api/orders",
-      "dest": "/api/orders.js",
-      "methods": ["POST", "OPTIONS"]
-    },
-    {
-      "src": "/api/menu", 
-      "dest": "/api/menu.js",
-      "methods": ["POST", "OPTIONS"]
-    },
-    {
-      "src": "/api/history",
-      "dest": "/api/history.js", 
-      "methods": ["POST", "OPTIONS"]
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
     }
   ]
 }
