@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/orders",
+      "dest": "/api/orders.js",
+      "methods": ["POST", "OPTIONS"]
+    },
+    {
+      "src": "/api/menu",
+      "dest": "/api/menu.js",
+      "methods": ["POST", "OPTIONS"]
+    },
+    {
+      "src": "/api/history",
+      "dest": "/api/history.js",
+      "methods": ["POST", "OPTIONS"]
+    }
+  ],
+  "env": {
+    "GOOGLE_SCRIPT_URL": "@google_script_url"
+  }
+}
