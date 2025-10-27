@@ -1,0 +1,16 @@
+{
+  "name": "taiwan-snack-backend",
+  "version": "1.0.0",
+  "description": "台灣小吃店後端 API",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "vercel": "^28.16.0"
+  }
+}
