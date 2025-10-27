@@ -1,5 +1,11 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
   "routes": [
     {
       "src": "/api/orders",
@@ -7,13 +13,13 @@
       "methods": ["POST", "OPTIONS"]
     },
     {
-      "src": "/api/menu",
+      "src": "/api/menu", 
       "dest": "/api/menu.js",
       "methods": ["POST", "OPTIONS"]
     },
     {
       "src": "/api/history",
-      "dest": "/api/history.js",
+      "dest": "/api/history.js", 
       "methods": ["POST", "OPTIONS"]
     }
   ],
